@@ -1,105 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashvtm | Official Artist Website (Not Ashwathama)</title>
+  <meta name="description" content="Ashvtm (Aryan Meshram) is an Indian independent artist and storyteller creating cinematic and spiritual music. Distinct from Ashwathama." />
+  <link rel="canonical" href="https://ashvtm.github.io/" />
 
-  <!-- Basic SEO -->
-  <title>Ashvtm | Aryan Meshram</title>
-  <meta name="description" content="Ashvtm known as Aryan Meshram is an Indian music artist & storyteller blending spiritual and cinematic vibes in sound & visuals." />
-
-  <!-- Google ownership (already used earlier) -->
-  <meta name="google-site-verification" content="c2baCCzvrYP_KPkGaaVcXK3JeG-z41SsEr9gtTshRDk" />
-
-  <!-- Open Graph (social preview) -->
-  <meta property="og:title" content="Ashvtm | Aryan Meshram" />
-  <meta property="og:description" content="Indian music artist & storyteller blending spiritual and cinematic vibes in sound & visuals." />
-  <meta property="og:image" content="https://ashvtm.github.io/Snapchat-565520819.jpg" />
-  <meta property="og:url" content="https://ashvtm.github.io/" />
-  <meta property="og:type" content="profile" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ashvtm | Aryan Meshram" />
-  <meta name="twitter:description" content="Indian music artist & storyteller blending spiritual and cinematic vibes in sound & visuals." />
-  <meta name="twitter:image" content="https://ashvtm.github.io/profile.jpg" />
-
-  <!-- JSON-LD structured data for Knowledge Graph -->
+  <!-- ✅ Schema for Google Knowledge Panel -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Aryan Meshram",
-    "alternateName": "Ashvtm",
+    "@type": "MusicGroup",
+    "name": "Ashvtm",
+    "alternateName": ["Ash VTM", "Ashvtm Official", "Ashvtm Artist", "Ash-V-T-M"],
+    "description": "Ashvtm (Aryan Meshram) is an independent Indian artist known for blending cinematic and spiritual vibes in music and storytelling. Not related to Ashwathama.",
     "url": "https://ashvtm.github.io/",
-    "image": "https://ashvtm.github.io/Snapchat-565520819.jpg",
-    "description": "Ashvtm known as Aryan Meshram is an Indian music artist & storyteller known for blending spiritual and cinematic vibes in sound & visuals.",
-    "jobTitle": "Music Artist, Storyteller",
     "sameAs": [
-      "https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==",
-      "https://youtube.com/@ashvtm?si=0yC86lGFESaTHGsC",
-      "https://www.facebook.com/share/17SNC1GbSz/"
-    ],
-    "nationality": "Indian"
+      "https://instagram.com/ashvtm",
+      "https://youtube.com/@ashvtm",
+      "https://open.spotify.com/artist/YOUR_SPOTIFY_LINK",
+      "https://soundcloud.com/YOUR_SOUNDCLOUD_LINK",
+      "https://x.com/YOUR_TWITTER_LINK"
+    ]
   }
   </script>
 
+  <!-- ✅ Basic Styling -->
   <style>
-    /* Minimal clean theme: white + dark blue + grey */
-    :root{
-      --blue-1:#001f3f;
-      --blue-2:#003366;
-      --muted:#6b6b6b;
-      --bg:#ffffff;
-      --card:#f8f9fb;
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    body {
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at top, #000010, #000);
+      color: #f2f2f2;
+      text-align: center;
+      padding: 50px 20px;
     }
-    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Poppins", "Segoe UI", Roboto, Arial;}
-    body{background:var(--bg);color:#111;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:28px;}
-
-    header{
-      width:100%;max-width:900px;background:linear-gradient(90deg,var(--blue-1),var(--blue-2));color:#fff;border-radius:12px;padding:34px 22px;text-align:center;box-shadow:0 6px 22px rgba(2,6,23,0.12);
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      color: #00e0ff;
+      margin-bottom: 15px;
     }
-    header img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.12);display:block;margin:0 auto 14px;}
-    header h1{margin:6px 0 0;font-size:28px;letter-spacing:0.6px;}
-    header h2{margin:6px 0 0;font-weight:500;color:rgba(255,255,255,0.9);font-size:16px;opacity:0.95;}
-
-    main{width:100%;max-width:900px;padding:28px 18px;text-align:center;background:var(--card);border-radius:10px;margin-top:20px;}
-    main p{max-width:780px;margin:0 auto;color:#222;line-height:1.6;font-size:16px;}
-    .links{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
-    .links a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--blue-1);color:#fff;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(0,31,63,0.08);transition:transform .15s,background .15s;}
-    .links a:hover{transform:translateY(-4px);background:var(--blue-2)}
-
-    footer{margin-top:26px;color:var(--muted);font-size:13px;}
-    @media (max-width:520px){
-      header{padding:26px 14px}
-      header h1{font-size:22px}
-      main{padding:20px 12px}
+    h2 {
+      font-size: 1.3rem;
+      color: #ccc;
+      font-weight: 400;
+      margin-top: -10px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 25px auto;
+    }
+    .social {
+      margin-top: 25px;
+    }
+    .social a {
+      margin: 0 10px;
+      color: #00e0ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .social a:hover {
+      color: #fff;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #888;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <!-- Upload your profile photo to repo root as "profile.jpg" OR change src to any hosted URL you prefer -->
-    <img src="https://ashvtm.github.io/Snapchat-565520819.jpg" alt="Ashvtm profile" />
-    <h1>Ashvtm</h1>
-    <h2>Aryan Meshram</h2>
-  </header>
+  <h1>ASHVTM</h1>
+  <h2>Independent Artist • Storyteller • Visionary</h2>
 
-  <main>
-    <p>
-      Ashvtm known as Aryan Meshram is an Indian music artist & storyteller known for blending spiritual and cinematic vibes in sound & visuals.
-    </p>
+  <p>
+    <strong>Ashvtm (Aryan Meshram)</strong> is an Indian independent music artist and storyteller,
+    known for blending <em>cinematic</em> and <em>spiritual</em> vibes in his sound and visuals.
+  </p>
 
-    <div class="links" aria-label="social links">
-      <a href="https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://youtube.com/@ashvtm?si=0yC86lGFESaTHGsC" target="_blank" rel="noopener noreferrer">YouTube</a>
-      <a href="https://www.facebook.com/share/17SNC1GbSz/" target="_blank" rel="noopener noreferrer">Facebook</a>
-    </div>
-  </main>
+  <p>
+    The name <strong>Ashvtm</strong> represents a unique identity — <u>not connected to Ashwathama</u>.
+    It stands for originality, inner reflection, and a new-age creative voice.
+  </p>
+
+  <div class="social">
+    <a href="https://instagram.com/ashvtm" target="_blank">Instagram</a> |
+    <a href="https://youtube.com/@ashvtm" target="_blank">YouTube</a> |
+    <a href="https://open.spotify.com/artist/YOUR_SPOTIFY_LINK" target="_blank">Spotify</a> |
+    <a href="https://soundcloud.com/YOUR_SOUNDCLOUD_LINK" target="_blank">SoundCloud</a> |
+    <a href="mailto:yourmail@gmail.com">Contact</a>
+  </div>
 
   <footer>
-    © 2025 Ashvtm | Designed by Aryan Meshram
+    © 2025 Ashvtm | Official Website | Created with 💙 by Aryan Meshram
   </footer>
 </body>
 </html>
