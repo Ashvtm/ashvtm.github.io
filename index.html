@@ -23,51 +23,90 @@
   }
   </script>
 
-  <!-- ✅ Basic Styling -->
+  <!-- ✅ Styling & Cinematic Effects -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    /* Background Animation */
     body {
-      font-family: "Poppins", sans-serif;
-      background: radial-gradient(circle at top, #000010, #000);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       color: #f2f2f2;
       text-align: center;
-      padding: 50px 20px;
+      background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10);
+      animation: backgroundPulse 10s ease-in-out infinite alternate;
     }
+
+    @keyframes backgroundPulse {
+      0% { background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10); }
+      50% { background: radial-gradient(circle at top, #1f2833, #0b0c10, #1f2833); }
+      100% { background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10); }
+    }
+
     h1 {
-      font-size: 3rem;
-      letter-spacing: 3px;
+      font-size: 4rem;
+      letter-spacing: 4px;
       color: #00e0ff;
-      margin-bottom: 15px;
+      margin: 0;
+      animation: fadeInUp 1.5s ease forwards;
     }
+
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: #ccc;
       font-weight: 400;
-      margin-top: -10px;
+      margin-top: 5px;
+      animation: fadeInUp 1.5s ease 0.5s forwards;
+      opacity: 0;
     }
+
     p {
       font-size: 1rem;
       line-height: 1.8;
       max-width: 700px;
-      margin: 25px auto;
+      margin: 20px auto;
+      animation: fadeInUp 1.5s ease 1s forwards;
+      opacity: 0;
     }
+
     .social {
-      margin-top: 25px;
+      margin-top: 30px;
+      animation: fadeInUp 1.5s ease 1.5s forwards;
+      opacity: 0;
     }
+
     .social a {
-      margin: 0 10px;
+      margin: 0 12px;
       color: #00e0ff;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.3s;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
+
     .social a:hover {
       color: #fff;
+      transform: scale(1.1);
     }
+
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 0.85rem;
       color: #888;
+      animation: fadeInUp 1.5s ease 2s forwards;
+      opacity: 0;
+    }
+
+    /* Fade in + move up animation */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
