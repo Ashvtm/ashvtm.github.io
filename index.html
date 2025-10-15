@@ -18,7 +18,10 @@
     "url": "https://ashvtm.github.io/",
     "sameAs": [
       "https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==",
-      "https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee"
+      "https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee",
+      "https://www.facebook.com/share/17Qj8ER73m/",
+      "https://x.com/ashvtm?t=_tPHQVQOvq4_h6c9Kxl8PA&s=09",
+      "https://www.threads.com/@ashvtm.official"
     ]
   }
   </script>
@@ -27,12 +30,11 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-    /* Background Animation */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -82,7 +84,7 @@
     }
 
     .social a {
-      margin: 0 12px;
+      margin: 0 10px;
       color: #00e0ff;
       text-decoration: none;
       font-weight: 600;
@@ -103,7 +105,25 @@
       opacity: 0;
     }
 
-    /* Fade in + move up animation */
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: left;
+      animation: fadeInUp 1.5s ease 1.5s forwards;
+      opacity: 0;
+    }
+
+    section h3 {
+      color: #00e0ff;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      color: #ccc;
+    }
+
     @keyframes fadeInUp {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -115,19 +135,27 @@
   <h1>ASHVTM</h1>
   <h2>Independent Artist • Storyteller • Visionary</h2>
 
-  <p>
-    <strong>Ashvtm (Aryan Meshram)</strong> is an Indian independent music artist and storyteller,
-    known for blending <em>cinematic</em> and <em>spiritual</em> vibes in his sound and visuals.
-  </p>
-
-  <p>
-    The name <strong>Ashvtm</strong> represents a unique identity — <u>not connected to Ashwathama</u>.
-    It stands for originality, inner reflection, and a new-age creative voice.
-  </p>
+  <section id="about">
+    <h3>About Me</h3>
+    <p>
+      My name is <strong>Aryan Meshram</strong>, also known as <strong>Ashvtm</strong>, a 20-year-old independent artist and content creator from Amravati, India.
+      I create music, cinematic content, and storytelling experiences that blend imagination with reality.  
+    </p>
+    <p>
+      Born on September 9, 2005, my goal after turning 21 is to produce a full travel series exploring India, sharing stories, adventures, and life beyond stress.  
+      I aim to develop a thrilling and inspiring personality, grow my creativity, and become famous by age 22.  
+    </p>
+    <p>
+      I dream of crossing 1 million views with my creativity and achieving the YouTube Silver Button milestone, marking the beginning of a journey filled with vision, exploration, and cinematic storytelling.
+    </p>
+  </section>
 
   <div class="social">
     <a href="https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==" target="_blank">Instagram</a> |
     <a href="https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee" target="_blank">YouTube</a> |
+    <a href="https://www.facebook.com/share/17Qj8ER73m/" target="_blank">Facebook</a> |
+    <a href="https://x.com/ashvtm?t=_tPHQVQOvq4_h6c9Kxl8PA&s=09" target="_blank">X / Twitter</a> |
+    <a href="https://www.threads.com/@ashvtm.official" target="_blank">Threads</a> |
     <a href="mailto:ashvtm.official@gmail.com">Contact</a>
   </div>
 
