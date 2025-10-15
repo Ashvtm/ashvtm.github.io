@@ -1,166 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashvtm | Official Artist Website (Not Ashwathama)</title>
-  <meta name="description" content="Ashvtm (Aryan Meshram) is an Indian independent artist and storyteller creating cinematic and spiritual music. Distinct from Ashwathama." />
-  <link rel="canonical" href="https://ashvtm.github.io/" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashvtm | Official Artist Website</title>
+<meta name="description" content="Ashvtm (Aryan Meshram) is an Indian independent artist and storyteller creating cinematic and spiritual music. Distinct from Ashwathama.">
+<link rel="canonical" href="https://ashvtm.github.io/">
 
-  <!-- ✅ Schema for Google Knowledge Panel -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Ashvtm",
-    "alternateName": ["Ash VTM", "Ashvtm Official", "Ashvtm Artist", "Ash-V-T-M"],
-    "description": "Ashvtm (Aryan Meshram) is an independent Indian artist known for blending cinematic and spiritual vibes in music and storytelling. Not related to Ashwathama.",
-    "url": "https://ashvtm.github.io/",
-    "sameAs": [
-      "https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==",
-      "https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee",
-      "https://www.facebook.com/share/17Qj8ER73m/",
-      "https://x.com/ashvtm?t=_tPHQVQOvq4_h6c9Kxl8PA&s=09",
-      "https://www.threads.com/@ashvtm.official"
-    ]
-  }
-  </script>
+<!-- ✅ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Ashvtm",
+  "alternateName": ["Ash VTM", "Ashvtm Official", "Ashvtm Artist", "Ash-V-T-M"],
+  "description": "Ashvtm (Aryan Meshram) is an independent Indian artist known for blending cinematic and spiritual vibes in music and storytelling. Not related to Ashwathama.",
+  "url": "https://ashvtm.github.io/",
+  "sameAs": [
+    "https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==",
+    "https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee",
+    "https://www.facebook.com/share/17Qj8ER73m/",
+    "https://x.com/ashvtm?t=_tPHQVQOvq4_h6c9Kxl8PA&s=09",
+    "https://www.threads.com/@ashvtm.official"
+  ]
+}
+</script>
 
-  <!-- ✅ Styling & Cinematic Effects -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: #f2f2f2;
-      text-align: center;
-      background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10);
-      animation: backgroundPulse 10s ease-in-out infinite alternate;
-    }
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10);
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
 
-    @keyframes backgroundPulse {
-      0% { background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10); }
-      50% { background: radial-gradient(circle at top, #1f2833, #0b0c10, #1f2833); }
-      100% { background: radial-gradient(circle at top, #0b0c10, #1f2833, #0b0c10); }
-    }
+/* Header Section */
+header {
+  text-align: center;
+  padding: 100px 20px 50px;
+  animation: fadeInUp 1.5s ease forwards;
+}
 
-    h1 {
-      font-size: 4rem;
-      letter-spacing: 4px;
-      color: #00e0ff;
-      margin: 0;
-      animation: fadeInUp 1.5s ease forwards;
-    }
+header h1 {
+  font-size: 4rem;
+  color: #00e0ff;
+  letter-spacing: 4px;
+}
 
-    h2 {
-      font-size: 1.5rem;
-      color: #ccc;
-      font-weight: 400;
-      margin-top: 5px;
-      animation: fadeInUp 1.5s ease 0.5s forwards;
-      opacity: 0;
-    }
+header p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height: 1.6;
+}
 
-    p {
-      font-size: 1rem;
-      line-height: 1.8;
-      max-width: 700px;
-      margin: 20px auto;
-      animation: fadeInUp 1.5s ease 1s forwards;
-      opacity: 0;
-    }
+/* Social Links */
+.social {
+  margin-top: 30px;
+  text-align: center;
+}
 
-    .social {
-      margin-top: 30px;
-      animation: fadeInUp 1.5s ease 1.5s forwards;
-      opacity: 0;
-    }
+.social a {
+  margin: 0 10px;
+  color: #00e0ff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-    .social a {
-      margin: 0 10px;
-      color: #00e0ff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
+.social a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
 
-    .social a:hover {
-      color: #fff;
-      transform: scale(1.1);
-    }
+/* About Section */
+.about-section {
+  margin: 60px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-    footer {
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #888;
-      animation: fadeInUp 1.5s ease 2s forwards;
-      opacity: 0;
-    }
+.about-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  flex: 1 1 300px;
+  max-width: 350px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: left;
-      animation: fadeInUp 1.5s ease 1.5s forwards;
-      opacity: 0;
-    }
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px rgba(0,224,255,0.6);
+}
 
-    section h3 {
-      color: #00e0ff;
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
+.about-card h3 {
+  color: #00e0ff;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
 
-    section p {
-      color: #ccc;
-    }
+.about-card p {
+  color: #ccc;
+  line-height: 1.5;
+}
 
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity:0; transform: translateY(20px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+@keyframes slideUp {
+  0% { opacity:0; transform: translateY(50px);}
+  100% { opacity:1; transform: translateY(0);}
+}
+
+/* Staggered animation delay for cards */
+.about-card:nth-child(1) { animation-delay: 0.2s; }
+.about-card:nth-child(2) { animation-delay: 0.4s; }
+.about-card:nth-child(3) { animation-delay: 0.6s; }
+.about-card:nth-child(4) { animation-delay: 0.8s; }
+
+footer {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+</style>
 </head>
 
 <body>
+
+<header>
   <h1>ASHVTM</h1>
-  <h2>Independent Artist • Storyteller • Visionary</h2>
+  <p>
+    Ashvtm (Aryan Meshram) is an Indian independent music artist and storyteller,
+    known for blending cinematic and spiritual vibes in his sound and visuals.<br>
+    The name Ashvtm represents a unique identity not connected to Ashwathama.
+    It stands for originality, inner reflection, and a new-age creative voice.
+  </p>
+</header>
 
-  <section id="about">
-    <h3>About Me</h3>
-    <p>
-      My name is <strong>Aryan Meshram</strong>, also known as <strong>Ashvtm</strong>, a 20-year-old independent artist and content creator from Amravati, India.
-      I create music, cinematic content, and storytelling experiences that blend imagination with reality.  
-    </p>
-    <p>
-      Born on September 9, 2005, my goal after turning 21 is to produce a full travel series exploring India, sharing stories, adventures, and life beyond stress.  
-      I aim to develop a thrilling and inspiring personality, grow my creativity, and become famous by age 22.  
-    </p>
-    <p>
-      I dream of crossing 1 million views with my creativity and achieving the YouTube Silver Button milestone, marking the beginning of a journey filled with vision, exploration, and cinematic storytelling.
-    </p>
-  </section>
+<div class="social">
+  <a href="https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==" target="_blank">Instagram</a> |
+  <a href="https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee" target="_blank">YouTube</a> |
+  <a href="https://www.facebook.com/share/17Qj8ER73m/" target="_blank">Facebook</a> |
+  <a href="https://x.com/ashvtm?t=_tPHQVQOvq4_h6c9Kxl8PA&s=09" target="_blank">X / Twitter</a> |
+  <a href="https://www.threads.com/@ashvtm.official" target="_blank">Threads</a> |
+  <a href="mailto:ashvtm.official@gmail.com">Contact</a>
+</div>
 
-  <div class="social">
-    <a href="https://www.instagram.com/ashvtm.official?igsh=MWowOWhjNnJxbWxobg==" target="_blank">Instagram</a> |
-    <a href="https://youtube.com/@ashvtm.official?si=YuH7bPnHXCeFEkee" target="_blank">YouTube</a> |
-    <a href="https://www.facebook.com/share/17Qj8ER73m/" target="_blank">Facebook</a> |
-    <a href="https://x.com/ashvtm?t=_tPHQVQOvq4_h6c9Kxl8PA&s=09" target="_blank">X / Twitter</a> |
-    <a href="https://www.threads.com/@ashvtm.official" target="_blank">Threads</a> |
-    <a href="mailto:ashvtm.official@gmail.com">Contact</a>
+<section class="about-section">
+  <div class="about-card">
+    <h3>Personal Info</h3>
+    <p>Name: Aryan Meshram<br>Alias: Ashvtm<br>Age: 20<br>Location: Amravati, India</p>
   </div>
+  <div class="about-card">
+    <h3>Goals & Dreams</h3>
+    <p>Produce a full travel series after turning 21. Explore India, share cinematic adventures, and live beyond stress.</p>
+  </div>
+  <div class="about-card">
+    <h3>Creative Vision</h3>
+    <p>Develop a thrilling and inspiring personality. Become famous by age 22, cross 1 million views, and achieve YouTube Silver Button.</p>
+  </div>
+  <div class="about-card">
+    <h3>Music & Storytelling</h3>
+    <p>Create cinematic, spiritual, and original music blended with storytelling. Inspire audience through visuals and sound.</p>
+  </div>
+</section>
 
-  <footer>
-    © 2025 Ashvtm | Official Website | Created with 💙 by Aryan Meshram
-  </footer>
+<footer>
+  © 2025 Ashvtm | Official Website | Created with 💙 by Aryan Meshram
+</footer>
+
 </body>
 </html>
