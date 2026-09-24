@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="ASHVTM — Stories that move. Sounds that stay. Music, journeys, stories and visuals by Aryan.">
+  <title>ASHVTM — Stories that move. Sounds that stay.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08090b;
+      --panel: #0d0f12;
+      --text: #f4f4f1;
+      --muted: #a2a6ad;
+      --line: rgba(255,255,255,.13);
+      --accent: #d9b878;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: "DM Sans", Arial, sans-serif; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .nav {
+      position: sticky; top: 0; z-index: 20; background: rgba(8,9,11,.84);
+      backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+    .nav-inner { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: Manrope, sans-serif; font-size: 23px; font-weight: 800; letter-spacing: .14em; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 30px; align-items: center; color: #d1d2d4; font-size: 13px; }
+    .nav-links a { transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { border: 1px solid var(--line); padding: 9px 15px; border-radius: 999px; }
+    .menu-btn { display: none; background: none; border: 1px solid var(--line); color: white; border-radius: 50px; padding: 9px 13px; font: inherit; }
+    .hero { padding: 92px 0 62px; text-align: center; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .24em; color: var(--accent); font-size: 10px; font-weight: 700; }
+    h1 { margin: 16px 0 8px; font: 800 clamp(54px, 9vw, 108px)/.98 Manrope, sans-serif; letter-spacing: .09em; }
+    .hero h2 { margin: 20px auto 9px; font: 600 clamp(18px, 2.4vw, 27px)/1.35 Manrope, sans-serif; }
+    .hero p { color: var(--muted); margin: 0 auto; font-size: 15px; }
+    .hero-actions { display: flex; justify-content: center; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 999px; padding: 11px 18px; font-size: 12px; font-weight: 700; transition: transform .2s, background .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .btn.primary { background: var(--text); color: #111; border-color: var(--text); }
+    .hero-image { margin: 54px auto 0; max-width: 980px; height: clamp(210px, 42vw, 430px); overflow: hidden; border-radius: 14px; border: 1px solid var(--line); position: relative; }
+    .hero-image img { height: 100%; object-fit: cover; filter: brightness(.72); }
+    .hero-image:after { content:""; position:absolute; inset:0; background: linear-gradient(90deg,rgba(0,0,0,.5),transparent 70%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 55%); }
+    .hero-image-caption { position:absolute; z-index:1; left: 26px; bottom: 22px; text-align:left; font-size: 11px; letter-spacing:.13em; text-transform:uppercase; color:#eee; }
+    .section { padding: 72px 0; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom: 28px; }
+    .section-kicker { color: var(--accent); text-transform:uppercase; font-size:10px; font-weight:700; letter-spacing:.2em; }
+    h3 { font: 700 clamp(26px, 4vw, 42px)/1.15 Manrope,sans-serif; margin: 8px 0 0; letter-spacing:-.04em; }
+    .section-head p { color:var(--muted); font-size:13px; max-width:340px; margin:0; }
+    .feature-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 36px 28px; }
+    .feature { min-width:0; }
+    .feature-image { aspect-ratio: 1.65 / 1; overflow:hidden; border-radius:13px; background:#17191d; border:1px solid var(--line); }
+    .feature-image img { height:100%; object-fit:cover; transition: transform .65s cubic-bezier(.2,.7,.2,1), filter .3s; filter:brightness(.9); }
+    .feature:hover .feature-image img { transform:scale(1.045); filter:brightness(1); }
+    .feature-label { margin: 17px 0 3px; font: 800 15px Manrope,sans-serif; letter-spacing:.035em; text-transform:uppercase; }
+    .feature-label span { color:var(--accent); }
+    .feature p { margin:0; color:#c0c2c6; font-size:15px; max-width: 490px; }
+    .about { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:linear-gradient(135deg,#0c0e11,#08090b 70%); }
+    .about-grid { display:grid; grid-template-columns: .9fr 1.1fr; gap:50px; align-items:center; }
+    .about-art { border-radius:14px; overflow:hidden; aspect-ratio:4/5; border:1px solid var(--line); }
+    .about-art img { height:100%; object-fit:cover; }
+    .about-copy p { color:#b9bdc3; font-size:15px; }
+    .about-copy .statement { font:600 clamp(21px,3vw,31px)/1.35 Manrope,sans-serif; color:var(--text); }
+    .quote { border-left:2px solid var(--accent); padding-left:16px; color:#d8d9dc !important; }
+    .journal { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .journal-card { border:1px solid var(--line); border-radius:13px; padding:22px; background:var(--panel); }
+    .journal-card small { color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:9px; font-weight:700; }
+    .journal-card h4 { margin:8px 0 7px; font:700 19px Manrope,sans-serif; }
+    .journal-card p { color:var(--muted); margin:0; font-size:13px; }
+    .contact { text-align:center; padding:88px 0 96px; }
+    .contact p { color:var(--muted); max-width:480px; margin:14px auto 24px; font-size:14px; }
+    .contact .socials { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:20px; }
+    .footer { border-top:1px solid var(--line); padding:20px 0; color:#858990; font-size:11px; }
+    .footer-inner { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .mobile-links { display:none; }
+    @media (max-width:720px) {
+      .wrap { width:min(100% - 32px,var(--max)); }
+      .nav-inner { min-height:65px; }
+      .brand { font-size:19px; }
+      .menu-btn { display:block; }
+      .nav-links { display:none; }
+      .mobile-links { padding:0 0 16px; display:none; flex-direction:column; gap:0; }
+      .mobile-links.open { display:flex; }
+      .mobile-links a { padding:10px 2px; color:#d1d2d4; border-top:1px solid rgba(255,255,255,.07); font-size:13px; }
+      .hero { padding:68px 0 40px; }
+      .hero-image { margin-top:36px; border-radius:10px; }
+      .section { padding:54px 0; }
+      .section-head { display:block; }
+      .section-head p { margin-top:12px; }
+      .feature-grid { gap:27px 15px; }
+      .feature-label { font-size:12px; margin-top:12px; }
+      .feature p { font-size:13px; line-height:1.55; }
+      .about-grid { grid-template-columns:1fr; gap:24px; }
+      .about-art { aspect-ratio:16/9; }
+      .journal { grid-template-columns:1fr; }
+      .contact { padding:65px 0 72px; }
+    }
+    @media (max-width:420px) {
+      .feature-grid { grid-template-columns:1fr; gap:25px; }
+      .feature-image { aspect-ratio:1.65/1; }
+      .hero p { max-width:290px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior:auto; }
+      *, *:before, *:after { transition:none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="ASHVTM home">ASHV<span>TM</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#world">The world</a><a href="#about">About</a><a href="#journal">Journal</a><a href="#contact" class="nav-cta">Connect ↗</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileLinks">Menu ☰</button>
+    </div>
+    <nav class="wrap mobile-links" id="mobileLinks" aria-label="Mobile navigation">
+      <a href="#world">The world</a><a href="#about">About</a><a href="#journal">Journal</a><a href="#contact">Connect ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="home">
+      <div class="eyebrow">Independent creative identity · By Aryan</div>
+      <h1>ASHVTM</h1>
+      <h2>Stories that move. Sounds that stay.</h2>
+      <p>Music, journeys, stories and visuals — collected into one creative world.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#world">Explore the world ↓</a>
+        <a class="btn" href="#about">Meet the creator</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85" alt="Mountain landscape at golden hour">
+        <div class="hero-image-caption">A world in progress · 01 / 04</div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="world">
+      <div class="section-head">
+        <div><div class="section-kicker">Explore ASHVTM</div><h3>One name. Many ways to create.</h3></div>
+        <p>From the sound of a first idea to the feeling of a new place — this is where the work lives.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="feature-image"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1100&q=85" alt="Music production studio with recording equipment" loading="lazy"></div>
+          <div class="feature-label">ASHVTM <span>/</span> Music</div>
+          <p>Original compositions, soundtracks and cinematic sound.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1100&q=85" alt="Mountain peaks and a winding travel route" loading="lazy"></div>
+          <div class="feature-label">ASHVTM <span>/</span> Journeys</div>
+          <p>Travel diaries, places, people and adventures.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-image"><img src="https://images.unsplash.com/photo-1455390582262-044c შ" alt="" loading="lazy"></div>
+          <div class="feature-label">ASHVTM <span>/</span> Stories</div>
+          <p>Personal reflections, short films and meaningful narratives.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-image"><img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1100&q=85" alt="Camera and filmmaking equipment in use" loading="lazy"></div>
+          <div class="feature-label">ASHVTM <span>/</span> Visuals</div>
+          <p>Video creation, filmmaking, edits and creative experiments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-art">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85" alt="A quiet scenic landscape with a road leading into the distance" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <div class="section-kicker">Behind the name</div>
+          <h3>Hi, I'm Aryan.</h3>
+          <p class="statement">ASHVTM is my space to explore ideas, make things and tell stories in my own way.</p>
+          <p>It brings together the things I want to create — music that sets a mood, stories that stay with you, and journeys that open up new perspectives. This is an evolving archive of the work, the learning and everything still to come.</p>
+          <p class="quote">Not just a destination. A process of becoming.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="journal">
+      <div class="section-head">
+        <div><div class="section-kicker">The journal</div><h3>Notes from the process.</h3></div>
+        <p>Small beginnings, experiments and behind-the-scenes moments.</p>
+      </div>
+      <div class="journal">
+        <article class="journal-card"><small>01 · Music</small><h4>Making a sound of my own</h4><p>Ideas, sketches and the process behind original music. Add your first release or studio note here.</p></article>
+        <article class="journal-card"><small>02 · Travel</small><h4>The places that shape a story</h4><p>Local discoveries and future travel diaries. Start with a place you know and tell us what makes it special.</p></article>
+      </div>
+    </section>
+
+    <section class="contact wrap" id="contact">
+      <div class="section-kicker">Stay connected</div>
+      <h3>Follow the journey.</h3>
+      <p>For new work, collaborations and the next chapter of ASHVTM, find me on my social platforms.</p>
+      <a class="btn primary" href="mailto:hello@ashvtm.com">Get in touch ↗</a>
+      <div class="socials">
+        <!-- Replace these # links with your real profile URLs -->
+        <a class="btn" href="#" aria-label="Instagram profile">Instagram ↗</a>
+        <a class="btn" href="#" aria-label="YouTube channel">YouTube ↗</a>
+        <a class="btn" href="#" aria-label="Music profile">Music ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner"><span>© <span id="year"></span> ASHVTM · By Aryan</span><span>Stories that move. Sounds that stay.</span></div>
+  </footer>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileLinks = document.getElementById('mobileLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = mobileLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
+      menuBtn.textContent = open ? 'Close ×' : 'Menu ☰';
+    });
+    mobileLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = 'Menu ☰';
+      });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
